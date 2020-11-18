@@ -24,6 +24,7 @@ DOWN
 DELAY 500
 ENTER
 DELAY 500
+REM I had some issues with HOME compiling...
 HOME
 DELAY 500
 REM Remove old hostname
