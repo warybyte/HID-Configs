@@ -1,0 +1,146 @@
+REM ---> Begin at login prompt <---
+REM -------------------
+REM Priming delay
+REM -------------------
+DELAY 5000
+REM ----------------------
+REM Login sequence
+REM ----------------------
+STRING <ENTER USER NAME>
+ENTER
+DELAY 500
+STRING <ENTER PASSWORD HERE>
+ENTER
+DELAY 2000
+REM ------------------------
+REM Modify system hostname
+REM ------------------------
+STRING nmtui
+ENTER
+DELAY 500
+DOWN
+DELAY 500
+DOWN
+DELAY 500
+ENTER
+DELAY 500
+LEFT
+REPEAT 7
+DELAY 500
+REM Remove old hostname
+DELETE
+REPEAT 6
+REM Type new hostname
+STRING <ENTER NEW HOSTNAME>
+DELAY 500
+DOWN
+REPEAT 1
+DELAY 500
+ENTER
+DELAY 500
+ENTER
+DELAY 500
+DOWN
+DELAY 500
+TAB
+DELAY 500
+DOWN
+DELAY 500
+ENTER
+DELAY 2000
+REM -------------------------
+REM Modify system networking
+REM -------------------------
+STRING nmtui
+ENTER
+DELAY 500
+ENTER
+DELAY 500
+ENTER
+DELAY 500
+DOWN 
+DELAY 500
+DOWN 
+DELAY 500
+DOWN 
+DELAY 500
+ENTER
+DELAY 500
+DOWN
+REPEAT 1
+ENTER
+DELAY 500
+RIGHT
+ENTER 
+DELAY 500
+DOWN
+DELAY 500
+ENTER
+DELAY 500 
+STRING 192.168.0.10/24
+DELAY 500
+DOWN
+DELAY 500
+DOWN
+DELAY 500
+DOWN
+STRING 192.168.0.1
+DELAY 500
+DOWN
+DELAY 500
+ENTER
+DELAY 500
+STRING 8.8.8.8
+DELAY 500
+DOWN
+DELAY 2000
+DOWN
+ENTER
+DELAY 500
+STRING 8.8.4.4
+DELAY 2000
+DOWN
+DELAY 500
+DOWN
+REPEAT 2
+DELAY 500
+DOWN
+REPEAT 2
+DELAY 500
+DOWN
+REPEAT 2
+DELAY 500
+DOWN
+REPEAT 3
+DELAY 2000
+REM --------------------
+REM Exit sequence
+REM --------------------
+ENTER
+TAB
+DELAY 1000
+DOWN
+REPEAT 2
+ENTER
+DELAY 1000
+DOWN
+REPEAT 2
+TAB
+ENTER
+DELAY 2000
+REM ----------------------
+REM Restart Networking
+REM ----------------------
+STRING service network restart
+DELAY 500
+ENTER
+DELAY 2000
+REM --------------------
+REM Print settings
+REM --------------------
+STRING uname -a
+ENTER
+DELAY 500
+STRING ip address
+ENTER
+DELAY 500
